@@ -9,10 +9,9 @@ import { Passenger } from "../entities/passenger";
 export class PassengerSearchComponent {
 
     name: string;
-    firstName: string;
     passengers: Array<Passenger> = [];
     selectedPassenger: Passenger;
-    
+    message: string;
     // private http: Http;
 
     constructor(private http: Http) {
@@ -28,7 +27,6 @@ export class PassengerSearchComponent {
 
         let search = new URLSearchParams();
         search.set('name', this.name);
-        search.set('firstName', this.firstName);
 
         this.http
             .get(url, { headers, search})
@@ -43,5 +41,29 @@ export class PassengerSearchComponent {
     select(p: Passenger) {
         this.selectedPassenger = p;
     }
+
+    save(): void {
+
+        let url = 'http://www.angular.at/api/passenger';
+
+        let headers = new Headers();
+        headers.set('Accept', 'application/json');
+
+        this.http
+            .post(url, this.selectedPassenger, { headers })
+            .map(resp => resp.json())
+            .subscribe(
+                passenger => { 
+                    this.selectedPassenger = passenger; 
+                    this.message = "Erfolgreich gespeichert!";
+                },
+                errResponse => { 
+                    console.error('Fehler beim Laden', errResponse); 
+                    this.message = "Fehler beim Speichern: " + errResponse.text();
+                }
+            );
+
+    }
+
 
 }
