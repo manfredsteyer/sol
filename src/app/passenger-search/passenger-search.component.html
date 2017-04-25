@@ -25,7 +25,7 @@
         <td>{{p.id}}</td>
         <td>{{p.firstName}}</td>
         <td>{{p.name}}</td>
-        <td>{{p.passengerStatus}}</td>
+        <td>{{p.passengerStatus | status:'short'}}</td>
         <td>{{p.bonusMiles}}</td>
         <td>
             <a (click)="select(p)">Auswählen</a>
