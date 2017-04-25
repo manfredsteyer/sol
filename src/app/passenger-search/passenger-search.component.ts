@@ -5,7 +5,8 @@ import { PassengerService } from "../passenger-search/passenger.service";
 
 @Component({
     selector: 'passenger-search',
-    templateUrl: './passenger-search.component.html'
+    templateUrl: './passenger-search.component.html',
+    styleUrls: ['./passenger-search.component.css']
 })
 export class PassengerSearchComponent {
 
