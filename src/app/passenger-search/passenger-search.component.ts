@@ -12,6 +12,7 @@ export class PassengerSearchComponent {
     name: string;
     passengers: Array<Passenger> = [];
     selectedPassenger: Passenger;
+    basket = { }
 
     constructor(private passengerService: PassengerService) {
     }

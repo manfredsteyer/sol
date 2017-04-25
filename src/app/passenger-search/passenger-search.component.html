@@ -17,9 +17,19 @@
     </button>
 </div>
 
+<div class="row">
+<div *ngFor="let p of passengers" style="margin-bottom:20px" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+    <passenger-card  
+        [item]="p"
+        [(selected)]="basket[p.id]">
+    </passenger-card>
+</div>    
+</div>
+
 <!--
     [ngClass]="{ 'active': f == selectedFlight }"
 -->
+<!--
 <table class="table table-striped">
     <tr *ngFor="let p of passengers" [ngStyle]="{ 'background-color': (p == selectedPassenger) ? 'orange' : '' }">
         <td>{{p.id}}</td>
@@ -32,10 +42,10 @@
         </td>
     </tr>
 </table>
-
+-->
 
 <pre>Warenkorb
 -----------------
-{{ selectedPassenger | json }}    
+{{ basket | json }}    
 </pre>    
 

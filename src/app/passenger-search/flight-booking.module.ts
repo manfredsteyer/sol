@@ -2,7 +2,8 @@ import {PassengerSearchComponent} from './passenger-search.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-import { SharedModule } from "app/shared/shared.module";
+import { SharedModule } from "../shared/shared.module";
+import { PassengerCardComponent } from "./passenger-card.component";
 
 @NgModule({
     imports: [
@@ -11,7 +12,8 @@ import { SharedModule } from "app/shared/shared.module";
         SharedModule
     ],
     declarations: [
-        PassengerSearchComponent
+        PassengerSearchComponent,
+        PassengerCardComponent
     ],
     providers: [],
     exports: [
