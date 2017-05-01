@@ -10,12 +10,15 @@
         required
         name="name"
         valName="strict"
+        asyncName
         minlength="3">
 
-    <div *ngIf="!f?.controls['name']?.valid">Fehler</div>
+    <div *ngIf="!f?.controls['name']?.valid && !f?.controls['name']?.pending">Fehler</div>
     <div *ngIf="f?.controls['name']?.hasError('required')">Required</div>
     <div *ngIf="f?.controls['name']?.hasError('minlength')">Minlength</div>
     <div *ngIf="f?.controls['name']?.hasError('valName')">ValName</div>
+    <div *ngIf="f?.controls['name']?.hasError('asyncName')">AsyncName</div>
+    <div *ngIf="f?.controls['name']?.pending">Pending</div>
 </div>
 
 <div class="form-group">
