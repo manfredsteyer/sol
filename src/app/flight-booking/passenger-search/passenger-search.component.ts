@@ -1,12 +1,12 @@
 import { Http, Headers, URLSearchParams } from '@angular/http';
 import { Component } from "@angular/core";
-import { Passenger } from "../entities/passenger";
-import { PassengerService } from "../passenger-search/passenger.service";
+import { Passenger } from "../../entities/passenger";
+import { PassengerService } from "../passenger.service";
 
 @Component({
     selector: 'passenger-search',
-    templateUrl: './passenger-search.component.html',
-    styleUrls: ['./passenger-search.component.css']
+    templateUrl: 'passenger-search.component.html',
+    styleUrls: ['passenger-search.component.css']
 })
 export class PassengerSearchComponent {
 

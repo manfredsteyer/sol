@@ -1,9 +1,9 @@
-import {Passenger} from '../entities/passenger';
+import {Passenger} from '../../entities/passenger';
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
     selector: 'passenger-card',
-    templateUrl: './passenger-card.component.html'
+    templateUrl: 'passenger-card.component.html'
 })
 export class PassengerCardComponent {
     @Input() item: Passenger;
