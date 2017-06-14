@@ -28,6 +28,13 @@
         (click)="search()">
         Search
     </button>
+
+    <button
+      class="btn btn-default"
+      (click)="addBonusMiles()"
+      *ngIf="passengers.length > 0">
+      Add Miles
+    </button>
 </div>
 </form>
 

@@ -10,27 +10,25 @@ import { PassengerService } from "../passenger.service";
 export class PassengerSearchComponent {
 
     name: string;
-    passengers: Array<Passenger> = [];
     selectedPassenger: Passenger;
     basket = { }
 
     constructor(private passengerService: PassengerService) {
     }
 
+    addBonusMiles() {
+      this.passengerService.addBonusMiles();
+    }
+
+    get passengers(): Passenger[] {
+      return this.passengerService.passengers;
+    }
+
     search(): void {
-
-        this.passengerService
-            .find(this.name)
-            .subscribe(
-                passengers => { this.passengers = passengers; },
-                errResponse => { console.error('Fehler beim Laden', errResponse); }
-            );
-
+        this.passengerService.find(this.name);
     }
 
     select(p: Passenger) {
         this.selectedPassenger = p;
     }
-
-
 }
