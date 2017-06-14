@@ -1,13 +1,12 @@
-
 import { Directive, Input } from '@angular/core';
 import { NG_VALIDATORS, Validator, AbstractControl } from '@angular/forms';
 
-@Directive({ 
+@Directive({
     selector: 'input[valName]',
     providers: [
-        { 
-            provide: NG_VALIDATORS, 
-            useExisting: NameValidationDirective, 
+        {
+            provide: NG_VALIDATORS,
+            useExisting: NameValidationDirective,
             multi: true
         }
     ]

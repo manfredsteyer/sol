@@ -1,5 +1,3 @@
-
-
 import { NgModule } from '@angular/core';
 import { StatusPipe } from "./pipes/status.pipe";
 import { CommonModule } from "@angular/common";

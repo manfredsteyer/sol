@@ -1,4 +1,3 @@
-import { Http, Headers, URLSearchParams } from '@angular/http';
 import { Component } from "@angular/core";
 import { Passenger } from "../../entities/passenger";
 import { PassengerService } from "../passenger.service";

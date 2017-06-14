@@ -1,13 +1,12 @@
-
-import { Directive, Input } from '@angular/core';
+import { Directive } from '@angular/core';
 import { NG_VALIDATORS, Validator, AbstractControl, FormGroup } from '@angular/forms';
 
-@Directive({ 
+@Directive({
     selector: 'form[publicPeople]',
     providers: [
-        { 
-            provide: NG_VALIDATORS, 
-            useExisting: PublicPeopleValidationDirective, 
+        {
+            provide: NG_VALIDATORS,
+            useExisting: PublicPeopleValidationDirective,
             multi: true
         }
     ]

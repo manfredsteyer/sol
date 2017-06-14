@@ -1,15 +1,14 @@
-
 import { Directive, Input } from '@angular/core';
-import { NG_VALIDATORS, AsyncValidator, AbstractControl, NG_ASYNC_VALIDATORS, ValidationErrors } from '@angular/forms';
+import { AsyncValidator, AbstractControl, NG_ASYNC_VALIDATORS, ValidationErrors } from '@angular/forms';
 import { Http, Headers, URLSearchParams } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 
-@Directive({ 
+@Directive({
     selector: 'input[asyncName]',
     providers: [
-        { 
-            provide: NG_ASYNC_VALIDATORS, 
-            useExisting: AsyncNameValidationDirective, 
+        {
+            provide: NG_ASYNC_VALIDATORS,
+            useExisting: AsyncNameValidationDirective,
             multi: true
         }
     ]
