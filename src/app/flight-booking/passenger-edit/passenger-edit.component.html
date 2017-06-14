@@ -1,4 +1,32 @@
 <h1>Passenger Edit</h1>
-<p>
-  Id: {{ id }}
-</p>
+
+<div *ngIf="message">{{message}}</div>
+
+<form *ngIf="passenger">
+  <div class="form-group">
+    <label>Id</label>
+    <input name="id" [(ngModel)]="passenger.id" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>First Name</label>
+    <input name="firstName" [(ngModel)]="passenger.firstName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input name="name" [(ngModel)]="passenger.name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Passenger Status</label>
+    <input name="passengerStatus" [(ngModel)]="passenger.passengerStatus" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Bonus Miles</label>
+    <input name="bonusMiles" [(ngModel)]="passenger.bonusMiles" class="form-control">
+  </div>
+  <div class="form-group">
+    <button (click)="save()" class="btn btn-primary">Save</button>
+  </div>
+
+
+
+</form>
