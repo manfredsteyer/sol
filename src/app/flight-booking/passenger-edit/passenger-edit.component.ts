@@ -3,8 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-passenger-edit',
-  templateUrl: './passenger-edit.component.html',
-  styleUrls: ['./passenger-edit.component.css']
+  templateUrl: './passenger-edit.component.html'
 })
 export class PassengerEditComponent implements OnInit {
 

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-flight-search',
-  templateUrl: './flight-search.component.html',
-  styleUrls: ['./flight-search.component.css']
+  templateUrl: './flight-search.component.html'
 })
 export class FlightSearchComponent implements OnInit {
 
