@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="666b588d6f9ac27c29fda9842637fdf1eaffd5fe" datatype="html">
+        <source>Flight Search</source>
+        <target>Flug Suchen</target>
+      </trans-unit>
+      <trans-unit id="a637175224d34148fcd6610dbc69243d5c6ce045" datatype="html">
+        <source>This is just a dummy route.</source>
+        <target>Das ist eine Dumme-Route.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

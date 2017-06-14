@@ -15,7 +15,7 @@ export class PassengerService {
     // Demo-Method that adds some bonus miles to
     // the first loaded passenger
     // Used to demonstrate OnPush
-    
+
     if (this.passengers.length == 0) return;
     this.passengers[0].bonusMiles += 1000;
   }
